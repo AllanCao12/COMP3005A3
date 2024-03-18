@@ -7,7 +7,7 @@ def getAllStudents():
     host = "localhost",
     database="a3",
     user="postgres",
-    password="franzy613",
+    password="test",
     port="5432"
     )
     con.autocommit = True
@@ -30,7 +30,7 @@ def addStudent(first_name, last_name, email, enrollment_date):
     host = "localhost",
     database="a3",
     user="postgres",
-    password="franzy613",
+    password="test",
     port="5432"
     )
     con.autocommit = True
@@ -46,7 +46,7 @@ def updateStudentEmail(student_id, new_email):
     host = "localhost",
     database="a3",
     user="postgres",
-    password="franzy613",
+    password="test",
     port="5432"
     )
     con.autocommit = True
@@ -62,7 +62,7 @@ def deleteStudent(student_id):
     host = "localhost",
     database="a3",
     user="postgres",
-    password="franzy613",
+    password="test",
     port="5432"
     )
     con.autocommit = True
@@ -80,7 +80,7 @@ def deleteStudent(student_id):
 # host = "localhost",
 # database="a3",
 # user="postgres",
-# password="franzy613",
+# password="test",
 # port="5432"
 # )
 # con.autocommit = True
