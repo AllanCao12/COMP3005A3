@@ -74,56 +74,56 @@ def deleteStudent(student_id):
     con.close()
 
 
-#running the code
+# running the code
 
-con = psycopg2.connect(
-host = "localhost",
-database="a3",
-user="postgres",
-password="franzy613",
-port="5432"
-)
-con.autocommit = True
-cur = con.cursor()
+# con = psycopg2.connect(
+# host = "localhost",
+# database="a3",
+# user="postgres",
+# password="franzy613",
+# port="5432"
+# )
+# con.autocommit = True
+# cur = con.cursor()
 
-create_table = '''
-    CREATE TABLE IF NOT EXISTS students (
-        student_id SERIAL PRIMARY KEY,
-        first_name VARCHAR(50) NOT NULL,
-        last_name VARCHAR(50) NOT NULL,
-        email VARCHAR(50) UNIQUE NOT NULL,
-        enrollment_date DATE
-    )
-'''
-cur.execute(create_table)
+# create_table = '''
+#     CREATE TABLE IF NOT EXISTS students (
+#         student_id SERIAL PRIMARY KEY,
+#         first_name VARCHAR(50) NOT NULL,
+#         last_name VARCHAR(50) NOT NULL,
+#         email VARCHAR(50) UNIQUE NOT NULL,
+#         enrollment_date DATE
+#     )
+# '''
+# cur.execute(create_table)
 
-cur.close()
-con.close()
+# cur.close()
+# con.close()
 
-getAllStudents()
+# getAllStudents()
 
-addStudent('John', 'Doe', 'john.doe@example.com', '2023-09-01')
-addStudent('Jane', 'Smith', 'jane.smith@example.com', '2023-09-01')
-addStudent('Jim', 'Beam', 'jim.beam@example.com', '2023-09-02')
+# addStudent('John', 'Doe', 'john.doe@example.com', '2023-09-01')
+# addStudent('Jane', 'Smith', 'jane.smith@example.com', '2023-09-01')
+# addStudent('Jim', 'Beam', 'jim.beam@example.com', '2023-09-02')
 
-getAllStudents()
+# getAllStudents()
 
-addStudent('Allan', 'Cao', 'allancao@example.com', '2024-03-18')
+# addStudent('Allan', 'Cao', 'allancao@example.com', '2024-03-18')
 
-getAllStudents()
+# getAllStudents()
 
-updateStudentEmail("1", "john_email@carleton.ca")
+# updateStudentEmail("1", "john_email@carleton.ca")
 
-getAllStudents()
+# getAllStudents()
 
-deleteStudent("4")
+# deleteStudent("4")
 
-getAllStudents()
+# getAllStudents()
 
-deleteStudent("1")
+# deleteStudent("1")
 
-getAllStudents()
+# getAllStudents()
 
-addStudent('John', 'Doe', 'john.doe@example.com', '2023-09-01')
+# addStudent('John', 'Doe', 'john.doe@example.com', '2023-09-01')
 
-getAllStudents()
+# getAllStudents()
